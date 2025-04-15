@@ -1,5 +1,2 @@
-databricks_workspace_resource_id = "/subscriptions/<sub_id>/resourceGroups/<rg>/providers/Microsoft.Databricks/workspaces/<workspace>"
-client_id                        = "<azure-client-id>"
-client_secret                    = "<azure-client-secret>"
-tenant_id                        = "<azure-tenant-id>"
-subscription_id                  = "<azure-subscription-id>"
+databricks_host  = "https://adb-xyz.azuredatabricks.net"
+databricks_token = "dapiXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX"
