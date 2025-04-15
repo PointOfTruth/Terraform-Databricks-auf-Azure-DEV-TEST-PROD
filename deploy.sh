@@ -25,7 +25,7 @@ terraform init -backend-config="environments/$ENVIRONMENT/$ENVIRONMENT.tfvars"
 # --- Terraform Plan und Apply ausführen ---
 echo "Erstelle Terraform Plan und wende es auf der $ENVIRONMENT Umgebung an..."
 terraform plan -var-file="environments/$ENVIRONMENT/$ENVIRONMENT.tfvars"
-terraform apply -var-file="environments/$ENVIRONMENT/$ENVIRONMENT.tfvars" -auto-approve
+terraform apply -var-file="environments/$ENVIRONMENT/$ENVIRONMENT.tfvars"
 
 # --- Deployment abgeschlossen ---
 echo "Terraform Deployment für $ENVIRONMENT abgeschlossen!"

@@ -1,25 +1,23 @@
-# --- Backend Variablen ---
-variable "resource_group_name" {
-  type        = string
-  description = "Azure Resource Group name for remote backend"
+variable "users" {
+  description = "Liste der Benutzer, die in Databricks angelegt werden sollen."
+  type = list(object({
+    email = string
+    name  = optional(string)
+  }))
 }
 
-variable "storage_account_name" {
-  type        = string
-  description = "Azure Storage Account name for remote backend"
+variable "groups" {
+  description = "Liste der Gruppen, die in Databricks erstellt werden sollen."
+  type        = list(string)
 }
 
-variable "container_name" {
-  type        = string
-  description = "Azure Blob container name for remote backend"
+variable "user_groups" {
+  description = "Zuordnung von Benutzern zu Gruppen (E-Mail -> Gruppenliste)."
+  type        = map(list(string))
 }
 
-variable "state_key" {
-  type        = string
-  description = "Key (path) to the state file in the backend container"
+variable "user_keys" {
+  description = "Optionale Liste von SSH-/API-Schlüsseln pro Benutzer (E-Mail -> Liste öffentlicher Schlüssel)."
+  type        = map(list(string))
+  default     = {}
 }
-
-# --- Databricks Provider ---
-variable "databricks_host" {
-  type        = string
-  description =

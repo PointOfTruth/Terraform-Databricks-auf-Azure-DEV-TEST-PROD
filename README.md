@@ -22,7 +22,7 @@ Hier ist eine detaillierte Übersicht über die Verzeichnisstruktur:
 ├── providers.tf                 # Zentrale Provider-Definition (Databricks, Azure)
 ├── variables.tf                 # Globale Variablen (z.B. databricks_host, token)
 ├── terraform.tfvars             # (Optional) Globale Standardwerte für Terraform
-
+│
 ├── modules/
 │   ├── backend/                 # Modul für Azure Remote Backend
 │   │   ├── main.tf              # Konfiguration für Azure Storage Account als Backend
